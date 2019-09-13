@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Whatsapp</string>
+
+
+    <!--  STRINGS TELA DE INICIO (POS INSTALACAO) -->
+    <string name="inicio_bem_vindo">Bem vindo(a) ao Whatsapp</string>
+    <string name="inicio_leia_os_termos">Leia nossa política de privacidade. Toque "Aceitar e continuar" para aceitar os Termos de serviço.</string>
+    <string name="inicio_botao_aceitar_e_continuar">Aceitar e continuar</string>
+    <string name="inicio_whatsapp_do_facebook">WhatsApp do Facebook</string>
+
+
+    <!--  STRINGS CADASTRO / LOGIN  -->
+    <string name="login_insira_seu_telefone">Insira seu número de telefone</string>
+    <string name="login_informacao">WhatsApp vai enviar uma mensagem SMS para verificar seu número de telefone.</string>
+    <string name="login_meu_numero">Qual é o meu número?</string>
+    <string name="login_tarifas_sms">Tarifas de SMS podem ser cobradas pela operadora</string>
+
+</resources>

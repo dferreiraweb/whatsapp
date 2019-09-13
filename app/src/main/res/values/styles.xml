@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorTextWhatsApp</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:itemBackground">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    
+    <style name="aparencia_editText" parent="@android:style/Widget.EditText">
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+</resources>
