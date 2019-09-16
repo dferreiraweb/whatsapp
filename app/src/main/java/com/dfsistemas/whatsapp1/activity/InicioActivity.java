@@ -1,28 +1,30 @@
 package com.dfsistemas.whatsapp1.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import com.dfsistemas.whatsapp1.R;
+import com.dfsistemas.whatsapp1.adapter.TabAdapter;
 import com.dfsistemas.whatsapp1.config.ConfiguracaoFirebase;
-import com.google.firebase.FirebaseApp;
+import com.dfsistemas.whatsapp1.helper.SlidingTabLayout;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 
 public class InicioActivity extends AppCompatActivity {
 
     private FirebaseAuth usuarioAutenticacao;
     private Toolbar toolbar;
+
+    private SlidingTabLayout slidingTabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,18 @@ public class InicioActivity extends AppCompatActivity {
         toolbar.setTitle("WhatsApp");
         setSupportActionBar(toolbar);
 
+        slidingTabLayout = findViewById(R.id.stl_tabs);
+        viewPager = findViewById(R.id.vp_pagina);
+
+        //Configurando sliding tabs
+        slidingTabLayout.setDistributeEvenly(true);
+        slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this, R.color.colorWhite));
+
+        //Configurar Adapter
+        TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(tabAdapter);
+
+        slidingTabLayout.setViewPager(viewPager);
     }
 
     @Override

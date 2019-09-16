@@ -6,5 +6,7 @@
 
     <color name="colorTextWhatsApp">#128c7e</color>
     <color name="colorButtonWhatsApp">#25d366</color>
-    <color name="colorTextButtonWhatsApp">#fff</color>
+    <color name="colorTextButtonWhatsApp">#023933</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorAccente">#023933</color>
 </resources>
