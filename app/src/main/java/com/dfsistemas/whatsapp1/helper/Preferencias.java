@@ -14,10 +14,12 @@ public class Preferencias {
     private String NOME_ARQUIVO = "whatsapp.preferencias";
     private int MODO_LEITURA = 0; //privado
 
-    private String CHAVE_NOME = "nome";
+//    private String CHAVE_NOME = "nome";
     private String CHAVE_TELEFONE = "telefone";
     private String CHAVE_TOKEN = "token";
     private String CHAVE_TERMOS = "termosUso";
+    private String CHAVE_IDENTIFICADOR = "identificadorUsuarioLogado";
+    private String CHAVE_NOMEE = "nomeUsuarioLogado";
 
 
 
@@ -37,7 +39,7 @@ public class Preferencias {
     public HashMap<String, String> getDadosUsuario() {
         HashMap<String, String> dadosUsuario = new HashMap<>();
 
-        dadosUsuario.put(CHAVE_NOME, preferences.getString(CHAVE_NOME, null));
+//        dadosUsuario.put(CHAVE_NOME, preferences.getString(CHAVE_NOME, null));
         dadosUsuario.put(CHAVE_TELEFONE, preferences.getString(CHAVE_TELEFONE, null));
         dadosUsuario.put(CHAVE_TOKEN, preferences.getString(CHAVE_TOKEN, null));
 
@@ -54,6 +56,20 @@ public class Preferencias {
             Toast.makeText(contexto, "Termos já aceitos!", Toast.LENGTH_SHORT).show();
             return true;
         }
+    }
+
+    public void salvarDados(String identificadorUsuario, String nomeUsuario) {
+        editor.putString(CHAVE_IDENTIFICADOR, identificadorUsuario);
+        editor.putString(CHAVE_NOMEE, nomeUsuario);
+        editor.commit();
+    }
+
+    public String getIdentificador() {
+        return preferences.getString(CHAVE_IDENTIFICADOR, null);
+    }
+
+    public String getNome() {
+        return preferences.getString(CHAVE_NOMEE, null);
     }
 
 }

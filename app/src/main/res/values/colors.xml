@@ -9,4 +9,6 @@
     <color name="colorTextButtonWhatsApp">#023933</color>
     <color name="colorWhite">#fff</color>
     <color name="colorAccente">#023933</color>
+    <color name="colorCinza">#CCCCCC</color>
+
 </resources>

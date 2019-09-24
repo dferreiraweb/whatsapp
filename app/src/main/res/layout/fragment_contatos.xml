@@ -6,20 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".fragment.ContatosFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ListView
+        android:id="@+id/listView_contatos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:divider="@color/colorCinza"
+        android:dividerHeight="1dp"
+        android:layout_gravity="center_horizontal|top"/>
 
-        <TextView
-            android:id="@+id/textView_contatos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CONTATOS"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>

@@ -18,6 +18,8 @@ import com.dfsistemas.whatsapp1.helper.EditTextPhoneMask;
 import com.dfsistemas.whatsapp1.helper.Efeitos;
 import com.dfsistemas.whatsapp1.helper.PermissionsHelper;
 import com.dfsistemas.whatsapp1.helper.Preferencias;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Random;
 
@@ -36,6 +38,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Vie
             Manifest.permission.INTERNET
     };
     private boolean permissaoCondedida = false;
+
 
 
     @Override
